@@ -1,4 +1,4 @@
-public abstract class LightingDevice {
+public abstract class LightingDevice implements ElectricDevice{
     public static final int MIN_BRIGHTNESS = 100;
     public static final int MAX_BRIGHTNESS = 0;
     private int brightness;
@@ -36,6 +36,15 @@ public abstract class LightingDevice {
 
         setBrightness(totalBrightness);
     }
+
+
+
+
+    @Override
+    public boolean isSwitched() {
+        return brightness > 0;
+    }
+
 
     public abstract int getEnergyConsumption();
 }

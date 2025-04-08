@@ -11,4 +11,14 @@ public class Chandelier extends LightingDevice{
     public int getEnergyConsumption() {
         return getBrightness() * getPower() * countLamps;
     }
+
+    @Override
+    public void switchOn() {
+        setBrightness(MAX_BRIGHTNESS);
+    }
+
+    @Override
+    public void switchOff() {
+        setBrightness(MIN_BRIGHTNESS);
+    }
 }
