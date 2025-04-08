@@ -25,4 +25,15 @@ public abstract class LightingDevice {
             this.brightness = brightness;
         }
     }
+
+    public void changeBrightness(int valuePercent) {
+        int totalBrightness = brightness;
+        if (valuePercent < 0) {
+            totalBrightness -= Math.abs(valuePercent);
+        } else if (valuePercent > 0) {
+            totalBrightness += Math.abs(valuePercent);
+        }
+
+        setBrightness(totalBrightness);
+    }
 }
