@@ -36,4 +36,6 @@ public abstract class LightingDevice {
 
         setBrightness(totalBrightness);
     }
+
+    public abstract int getEnergyConsumption();
 }
